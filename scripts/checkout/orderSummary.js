@@ -104,7 +104,6 @@ export function renderOrderSummary(){
 
   document.querySelector('.js-order-summary')
     .innerHTML = cartSummaryHTML;
-  // console.log(cartSummaryHTML);
 
   document.querySelectorAll('.js-delete-link')
     .forEach((link) => {
