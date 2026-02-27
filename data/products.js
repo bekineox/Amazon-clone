@@ -1,4 +1,4 @@
-import {formatCurrency} from '../scripts/utils/money.js'
+import {formatCurrency} from '../scripts/utils/money.js';
 export function getProduct(productId){
   let matchingProduct;
 
@@ -90,10 +90,12 @@ object3.method();
 export let products = [];
 
 export function loadProductsFetch() {
-  const promise = fetch('https://supersimplebackend.dev/products').then((response) => {
+  const promise = fetch('https://supersimplebackend.dev/products')
+  .then((response) => {
     return response.json();
-  }).then((productsData) => {
-    productsData.map((productDetails) => {
+  })
+  .then((productsData) => {
+    products = productsData.map((productDetails) => {
       if (productDetails.type === 'clothing') {
         return new Clothing(productDetails);
       }
