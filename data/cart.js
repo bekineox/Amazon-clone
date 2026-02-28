@@ -82,7 +82,7 @@ export function updateDeliveryOption(productId, deliveryOptionId){
 export function loadCart(fun){
   const xhr = new XMLHttpRequest();
 
-  addEventListener('load', () => {
+  xhr.addEventListener('load', () => {
     console.log(xhr.response);
     fun();
   });
